@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Two Design">
+    <title>Mario Roberto</title>
+  <meta name="description" content="Celebremos juntos sus 65 años">
+
+  <!-- Open Graph (WhatsApp, Facebook) -->
+  <meta property="og:title" content="Mario Roberto">
+  <meta property="og:description" content="Celebremos juntos sus 65 años">
+  <meta property="og:image" content="https://i.postimg.cc/yx8Xty4g/MODELOGATSBY.jpg">
+  <meta property="og:image:type" content="image/jpg">
+  <meta property="og:url" content="https://modelogatsby.thetwodesign.com">
+  <meta property="og:type" content="website">
+
+  <!-- Twitter/X -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Mario Roberto">
+  <meta name="twitter:description" content="Celebremos juntos sus 65 años">
+  <meta name="twitter:image" content="https://i.postimg.cc/RVcgF8dG/IEL.png">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&amp;family=Great+Vibes&amp;family=Outfit:wght@300;400;500;600&amp;display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer">
+    <!-- <script src="https://cdn.lordicon.com/lordicon.js"></script> -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- PORTADA -->
+    <section class="portada" id="portada">
+        <div class="portada-fondo"></div>
+        <div class="portada-contenido">
+            <p class="portada-subtitulo" data-i18n="portada_kicker">Acompáñanos a celebrar los 65 años de</p>
+            <h1 class="portada-nombre-principal">Mario Roberto</h1>
+            <button type="button" class="portada-sobre-btn" id="portada-envelope-trigger" aria-label="Abrir invitación desde el sobre">
+                <img src="images/ENVGATSBY.png" alt="Sobre de invitación" class="portada-sobre-img">
+            </button>
+            <button class="portada-boton" id="btn-abrir" data-i18n="portada_boton">Abrir invitación</button>
+        </div>
+    </section>
+
+    <!-- CONTENIDO -->
+    <main class="invitacion" id="invitacion">
+        
+        <!-- Hero Invitado -->
+        <section class="hero-invitado" id="hero-invitado">
+            <div class="hero-invitado-fondo"></div>
+            <div class="hero-invitado-contenido">
+                <div class="scroll-hint" id="scroll-hint">
+                    <span class="scroll-hint-text" data-i18n="scroll_hint">Desliza hacia abajo</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="section names-editorial fade-in-element" id="names">
+            <div class="names-grid">
+                <div class="names-block">
+                    <div class="name-lines">
+                        <div>Mario</div>
+                        <div>Roberto</div>
+                        <div>65 Años</div>
+                    </div>
+                </div>
+
+                <div class="date-vertical">
+                    <span>02</span>
+                    <span>08</span>
+                    <span>27</span>
+                </div>
+            </div>
+
+            <p class="names-text" data-i18n="names_text">Sesenta y cinco años de historia, familia y momentos inolvidables. Hoy queremos celebrarlo junto a ti.</p>
+        </section>
+
+        <!-- Sección Invitado -->
+        <section class="section invitado-section events-section" id="invitado">
+            <div class="invitado-fondo events-fondo"></div>
+            <div class="events-overlay"></div>
+            <div class="invitado-tarjeta event-card">
+                <div class="invitado-contenido">
+                    <p class="invitado-mensaje" data-i18n="invitado_mensaje">Tu presencia hace este momento aún más memorable</p>
+                    <p class="invitado-nombre" id="nombre-invitado">Nombre del Invitado</p>
+                    <p class="invitado-lugares" data-i18n-template="invitado_lugares">Hemos reservado para ti <span id="numero-lugares">3</span><span id="texto-lugares"> espacios para adultos</span></p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Cuenta Regresiva -->
+        <section class="section countdown-section" id="countdown">
+            <div class="countdown-fondo"></div>
+            <div class="countdown-overlay"></div>
+            <div class="section-inner">
+                <h2 class="countdown-titulo" data-i18n="countdown_titulo_simple">¡Solo falta!</h2>
+                <div class="countdown" id="countdown-timer">
+                    <div class="countdown-item">
+                        <span class="countdown-number" id="days">00</span>
+                        <span class="countdown-label" data-i18n="countdown_dias">Días</span>
+                    </div>
+                    <div class="countdown-separator">·</div>
+                    <div class="countdown-item">
+                        <span class="countdown-number" id="hours">00</span>
+                        <span class="countdown-label" data-i18n="countdown_horas">Horas</span>
+                    </div>
+                    <div class="countdown-separator">·</div>
+                    <div class="countdown-item">
+                        <span class="countdown-number" id="minutes">00</span>
+                        <span class="countdown-label" data-i18n="countdown_min">Min</span>
+                    </div>
+                    <div class="countdown-separator">·</div>
+                    <div class="countdown-item">
+                        <span class="countdown-number" id="seconds">00</span>
+                        <span class="countdown-label" data-i18n="countdown_seg">Seg</span>
+                    </div>
+                </div>
+                <a href="https://calendar.google.com/calendar/render?action=TEMPLATE&amp;text=Recepci%C3%B3n%20Cumplea%C3%B1os%2065%20Mario%20Roberto&amp;dates=20270802T200000/20270803T010000&amp;ctz=America%2FGuatemala&amp;details=Celebraci%C3%B3n%20de%20cumplea%C3%B1os%2065%20de%20Mario%20Roberto&amp;location=Charleston%20Antigua%2C%206a%20Avenida%20Norte%201%2C%20Antigua%20Guatemala" target="_blank" class="btn-calendar" data-i18n="btn_calendar" data-calendar-link="true">
+                    Agregar al calendario
+                </a>
+            </div>
+        </section>
+
+        <section class="section bendiciones-section visible is-visible" id="bendiciones" style="--reveal-order: 3;">
+            <div class="bendiciones-fondo"></div>
+            <div class="events-overlay"></div>
+            <div class="bendiciones-tarjeta">
+                <div class="bendiciones-contenido">
+                    <p class="bendiciones-texto" data-i18n="nuevo_texto">Hoy celebramos 65 años de vida, recuerdos y cariño compartido. Una noche especial para brindar por Mario Roberto y por todo lo que ha construido a lo largo del camino.</p>
+                    <h2 class="bendiciones-nombre" data-i18n="nuevo_titulo">Feliz cumpleaños 65</h2>
+                </div>
+            </div>
+        </section>
+
+        <section class="section section-separador" id="separador-itinerario" aria-label="Separador visual">
+            <img src="images/H4.jpeg" alt="Separador visual" class="separador-foto-img" loading="lazy">
+        </section>
+
+        <!-- Recepción -->
+        <section class="section events-section" id="events">
+            <div class="events-fondo"></div>
+            <div class="events-overlay"></div>
+            <div class="events-container">
+                <div class="events-script-shield" hidden></div>
+                <div class="event-card">
+                    <div class="event-icon zoom-in-element">
+                        <img src="images/VENUE.png" alt="Lugar de recepción" class="event-photo-icon">
+                    </div>
+                    <h3 class="event-titulo" data-i18n="evento2_titulo">
+                        <span class="event-inicial">R</span><span class="event-resto">ecepción</span>
+                    </h3>
+                    <p class="event-time">8:00 PM</p>
+                    <p class="event-lugar">Charleston Antigua</p>
+                    <p class="event-direccion">6a Avenida Norte 1, Antigua Guatemala</p>
+                    <a href="https://maps.app.goo.gl/b6E9c3MDqrjuk1768" target="_blank" class="btn-location" data-i18n="btn_location">Ver ubicación</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Código de vestimenta -->
+        <section class="section dresscode-section" id="dresscode">
+            <div class="dresscode-fondo"></div>
+            <div class="events-overlay"></div>
+            <div class="section-inner dresscode-inner">
+                <div class="dresscode-gifts-block" id="dresscode-block">
+                    <img src="images/DRESSCODE.png" alt="Icono código de vestimenta" class="dresscode-icon">
+                    <div class="dresscode-gifts-divider" aria-hidden="true"></div>
+                    <h2 class="dresscode-title" data-i18n="dresscode_title">Código de vestimenta</h2>
+
+                    <p class="dresscode-text" data-i18n="dresscode_text">Esta noche merece tu mejor versión. Te invitamos a vestir en Gala Formal para celebrar juntos este gran momento.</p>
+                    <p class="moodboard-subtitulo" data-i18n="moodboard_subtitulo">Referencias de estilo</p>
+                    <div class="dresscode-moodboard">
+                        <div class="moodboard-grid">
+                            <img src="images/DC1.png" alt="Inspiración de vestimenta" class="moodboard-img">
+                            <img src="images/DC2.png" alt="Inspiración de vestimenta" class="moodboard-img">
+                            <img src="images/DC3.png" alt="Inspiración de vestimenta" class="moodboard-img">
+                            <img src="images/DC4.png" alt="Inspiración de vestimenta" class="moodboard-img">
+                        </div>
+                    </div>
+                    <a href="https://www.pinterest.com/search/pins/?q=great%20gatsby%20party%20outfits&rs=typed" target="_blank" rel="noopener noreferrer" class="btn-dresscode hidden" data-i18n="btn_dresscode" aria-hidden="true" tabindex="-1">Ideas de Vestuario</a>
+                </div>
+
+                <div class="dresscode-gifts-block" id="gifts">
+                    <h2 class="gifts-title" data-i18n="gifts_title">
+                        <span class="gifts-title-inicial">L</span><span class="gifts-title-resto">luvia de </span><span class="gifts-title-inicial">S</span><span class="gifts-title-resto">obres</span>
+                    </h2>
+
+                    <p class="gifts-text" data-i18n="gifts_text">Tu presencia es el mejor regalo. Si deseas tener un detalle con Mario Roberto, contaremos con lluvia de sobres.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="section section-separador" id="separador-regalos" aria-label="Separador visual">
+            <img src="images/H1.jpeg" alt="Separador visual" class="separador-foto-img" loading="lazy">
+        </section>
+
+        <!-- Playlist -->
+        <section class="section playlist-section events-section" id="playlist">
+            <div class="events-fondo"></div>
+            <div class="events-overlay"></div>
+            <div class="playlist-media-wrap">
+                <article class="playlist-block">
+                    <!--
+                    <div class="playlist-icon zoom-in-element">
+                        <lord-icon src="https://cdn.lordicon.com/vvlnxtgv.json" trigger="loop" stroke="light" colors="primary:#C9A84C,secondary:#E8D5A3"></lord-icon>
+                    </div>
+                    -->
+
+                    <h2 class="playlist-title" data-i18n="playlist_title">
+                        <span class="playlist-title-inicial">P</span><span class="playlist-title-resto">laylist</span>
+                    </h2>
+
+                    <p class="playlist-text" data-i18n="playlist_text">Ayúdanos a crear la playlist perfecta para esta celebración. Agrega esa canción que no puede faltar.</p>
+
+                    <a href="https://open.spotify.com/playlist/5KSAAXJ8CsRmB8q3L0LZwG?si=e1968c010cd94302&amp;pt=9576a9c0c4c8dbe537d54a5fa0a17e79" target="_blank" class="btn-playlist" data-i18n="btn_playlist">Agregar canción</a>
+                </article>
+            </div>
+        </section>
+
+        <section class="section section-separador" id="separador-wishes" aria-label="Separador visual">
+            <img src="images/H2.png" alt="Separador visual" class="separador-foto-img" loading="lazy">
+        </section>
+
+        <!-- Buenos Deseos -->
+        <section class="section wishes-section" id="wishes-section">
+            <div class="wishes-fondo"></div>
+            <div class="events-overlay"></div>
+            <div class="section-inner wishes-inner">
+                <!--
+                <div class="wishes-icon zoom-in-element">
+                    <lord-icon src="https://cdn.lordicon.com/okgbpdra.json" trigger="loop" stroke="light" colors="primary:#C9A84C,secondary:#E8D5A3"></lord-icon>
+                </div>
+                -->
+
+                <h2 class="wishes-title" data-i18n="wishes_title">
+                    <span class="wishes-title-inicial">B</span><span class="wishes-title-resto">uenos</span>
+                    <span class="wishes-title-space"></span>
+                    <span class="wishes-title-inicial">D</span><span class="wishes-title-resto">eseos</span>
+                </h2>
+
+                <p class="wishes-text" data-i18n="wishes_text">Déjale un mensaje especial a Mario Roberto para guardar este recuerdo por siempre.</p>
+
+                <div class="wishes-actions">
+                    <div class="wishes-buttons">
+                        <button type="button" class="btn-wish-toggle" onclick="toggleWishForm()" data-i18n="btn_wish_open">Déjame tu deseo</button>
+                        <button type="button" class="btn-wish-toggle" onclick="toggleWishes()" data-i18n="btn_wish_read">Leer buenos deseos</button>
+                    </div>
+
+                    <div id="wish-form-panel" class="wish-panel hidden">
+                        <form id="wish-form" class="wish-form" onsubmit="return submitWish(event)">
+                            <div class="wish-field">
+                                <label for="wish-name" data-i18n="wish_label_nombre">Nombre</label>
+                                <input type="text" id="wish-name" name="name" placeholder="Tu nombre" data-i18n-placeholder="wish_placeholder_nombre" required>
+                            </div>
+                            <div class="wish-field">
+                                <label for="wish-message" data-i18n="wish_label_deseo">Deseo</label>
+                                <textarea id="wish-message" name="message" placeholder="Escribe tu mensaje" data-i18n-placeholder="wish_placeholder_deseo" rows="5" required></textarea>
+                            </div>
+                            <button type="submit" class="btn-wish-submit" data-i18n="btn_wish_submit">Enviar deseo</button>
+                            <p id="wish-status" class="wish-status" aria-live="polite"></p>
+                        </form>
+                    </div>
+
+                    <div id="wishes" class="wishes-list hidden">
+                        <p class="wishes-empty">Aún no hay deseos. Sé el primero en dejarme uno.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Confirmación de Asistencia -->
+        <section class="section rsvp-section" id="rsvp-section">
+            <div class="rsvp-fondo"></div>
+            <div class="events-overlay"></div>
+            <div class="section-inner rsvp-inner">
+                <div class="rsvp-panel">
+                    <!--
+                    <div class="rsvp-icon zoom-in-element">
+                        <lord-icon src="https://cdn.lordicon.com/unkasvor.json" trigger="loop" stroke="light" colors="primary:#C9A84C,secondary:#E8D5A3"></lord-icon>
+                    </div>
+                    -->
+
+                    <h2 class="rsvp-title" data-i18n="rsvp_title">
+                        <span class="rsvp-title-palabra">
+                            <span class="rsvp-title-inicial">C</span><span class="rsvp-title-resto">onfirmar</span>
+                        </span>
+                        <span class="rsvp-title-space"></span>
+                        <span class="rsvp-title-palabra">
+                            <span class="rsvp-title-inicial">A</span><span class="rsvp-title-resto">sistencia</span>
+                        </span>
+                    </h2>
+
+                    <p class="rsvp-intro" data-i18n="rsvp_intro">Tu presencia hará este día aún más especial. Por favor confirma tu asistencia antes del 11 de julio.</p>
+
+                    <form id="rsvp-form" class="rsvp-form" novalidate>
+                        <div class="form-group">
+                            <label for="rsvp-name">Nombre del invitado</label>
+                            <input type="text" id="rsvp-name" name="name" value="Nombre del Invitado" readonly>
+                        </div>
+
+                        <div class="form-group">
+                            <p class="rsvp-label" data-i18n="rsvp_label_asistencia">Asistirás</p>
+                            <div class="rsvp-response-group">
+                                <label class="rsvp-radio-option" for="rsvp-response-yes">
+                                    <input type="radio" id="rsvp-response-yes" name="attendance" value="yes">
+                                    <span data-i18n="rsvp_si">Sí, con mucho gusto</span>
+                                </label>
+                                <label class="rsvp-radio-option" for="rsvp-response-no">
+                                    <input type="radio" id="rsvp-response-no" name="attendance" value="no">
+                                    <span data-i18n="rsvp_no">No, lamentablemente no podré</span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="form-group" id="guest-count-wrapper" style="display: none;">
+                            <label for="guest-count" data-i18n="rsvp_label_pases">Passes</label>
+                            <select id="guest-count" name="guests">
+                                <option value="1">1 adulto</option>
+                                <option value="2">2 adultos</option>
+                                <option value="3">3 adultos</option>
+                                <option value="4">4 adultos</option>
+                                <option value="5">5 adultos</option>
+                                <option value="6">6 adultos</option>
+                            </select>
+                        </div>
+
+                        <button type="submit" class="btn-rsvp" id="rsvp-submit" data-i18n="btn_rsvp">Confirmar asistencia</button>
+                    </form>
+
+                    <div id="rsvp-success" class="rsvp-success rsvp-final-container" style="display: none;">
+                        <p id="rsvp-final-message">Gracias por confirmar tu asistencia. Este mensaje quedará visible de forma permanente.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+         <section class="section section-separador section-separador-rotativo" id="separador-rotativo" aria-label="Separador visual rotativo" data-rotativo-images="images/H2.png,images/H3.jpeg,images/H4.jpeg,images/H5.jpeg" data-rotativo-positions="50% center,50% center,50% center,50% center">
+            <img src="images/H1.jpeg" alt="Separador visual" class="separador-foto-img" loading="lazy">
+        </section>
+
+        <section id="frase-final" class="section final-cierre-section">
+            <div class="final-cierre-fondo"></div>
+            <div class="events-overlay"></div>
+            <div class="section-inner final-cierre-inner">
+                <article class="frase-card">
+                    <p class="frase-texto" data-i18n="frase_final">Hoy celebramos la vida de Mario Roberto, sus 65 años de historias, cariño y momentos inolvidables. Gracias por ser parte de esta noche tan especial.</p>
+                </article>
+            </div>
+        </section>
+
+        <div class="trayectoria-lightbox" id="trayectoria-lightbox" aria-hidden="true">
+            <button type="button" class="trayectoria-lightbox-close" id="trayectoria-lightbox-close" aria-label="Cerrar">&times;</button>
+            <button type="button" class="trayectoria-lightbox-nav prev" id="trayectoria-prev" aria-label="Foto anterior">&#10094;</button>
+            <img id="trayectoria-lightbox-img" src="" alt="Foto ampliada de Mi Trayectoria">
+            <button type="button" class="trayectoria-lightbox-nav next" id="trayectoria-next" aria-label="Foto siguiente">&#10095;</button>
+        </div>
+
+        <footer id="footer" class="footer">
+            <div id="social-icons">
+                <a href="https://wa.me/50236011737" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
+                    <i class="fab fa-whatsapp"></i>
+                </a>
+                <a href="https://www.facebook.com/thetwodesign" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+                    <i class="fab fa-facebook"></i>
+                </a>
+                <a href="https://www.instagram.com/thetwodesign" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+                    <i class="fab fa-instagram"></i>
+                </a>
+            </div>
+
+            <div class="footer-logo">
+                <img id="footer-logo" alt="Logo de la empresa" src="images/logo.png">
+            </div>
+        </footer>
+    </main>
+
+    <div class="music-fab is-visible" id="music-fab" aria-live="polite">
+        <audio id="musica-audio" loop>
+            <source src="audio/cancion.mp3" type="audio/mpeg">
+        </audio>
+        <button id="musica-btn" class="music-fab-btn" type="button" aria-label="Pausar música" aria-pressed="true">
+            <i class="fa-solid fa-volume-high music-fab-icon-on" aria-hidden="true"></i>
+            <i class="fa-solid fa-volume-xmark music-fab-icon-off" aria-hidden="true"></i>
+        </button>
+    </div>
+
+    <script src="config.js"></script>
+    <script src="script.js"></script>
+    <script type="module" src="database.js"></script>
+</body>
+</html>
